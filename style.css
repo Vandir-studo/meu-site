@@ -53,6 +53,7 @@ nav {
     background-color: var(--cor-menu-fundo);
     padding: 10px;
     border-radius: 6px;
+    overflow-x: auto; /* Permite rolar o menu lateralmente se a tela for muito pequena */
 }
 
 nav ul {
@@ -61,23 +62,23 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+    gap: 10px; /* Reduzimos um pouco o espaço entre os botões para caber melhor no celular */
+    white-space: nowrap; /* Garante que os textos dos links não quebrem em duas linhas */
 }
 
 nav a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    padding: 6px 12px;
+    padding: 6px 10px; /* Ajuste leve no padding para economizar espaço */
     border-radius: 4px;
+    font-size: 0.9rem; /* Tamanho levemente otimizado para mobile */
     transition: background-color 0.3s;
 }
 
 nav a:hover {
     background-color: var(--cor-hover);
 }
-
 /* --- Conteúdo Principal --- */
 main {
     max-width: 800px;
@@ -191,4 +192,3 @@ footer {
     color: #ffffff;
     font-size: 0.9rem;
 }
-
